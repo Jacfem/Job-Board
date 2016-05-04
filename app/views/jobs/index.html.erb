@@ -1,0 +1,9 @@
+<h1>All current postings</h1>
+
+<ol><% @jobs.each do |job| %>
+  <h2><%= link_to job.title, job %></h2>
+  <p><%= job.company %></p>
+<%end%>
+</ol>
+
+<%= link_to 'Create a Job', new_job_path %>
